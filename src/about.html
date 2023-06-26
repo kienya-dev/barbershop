@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"О нас"
+})
+
+<body class="preload">
+    <div class="wrapper">
+        @@include('html/_header-page.htm',{})
+        <main class="page">
+            <section class="about">
+                <div class="about__container">
+                    <div class="about__columns about__columns_page">
+                        <div class="about__images">
+                            <figure class="about__img about__img_small">
+                                <img src="img/about_img_1.jpg" alt="">
+                            </figure>
+                            <figure class="about__img about__img_big">
+                                <img src="img/about_img_2.jpg" alt="">
+                            </figure>
+                            <div class="about__label">
+                                <span>Опыт более</span>
+                                <span class="about__num"><span>10</span> лет</span>
+                            </div>
+                        </div>
+                        <div class="about__content">
+                            <h1 class="title title_size_46 title_color_white about__title">
+                                О нашем <span>Барбершопе</span>
+                            </h1>
+
+                            <div class="about__inner">
+
+                                <div class="page__text about__text">
+                                    <p>Lorem ipsum dolor sit amet consectetur. Aliquam at id et eget aliquam. Adipiscing
+                                        euismod lorem turpis dignissim nulla. Mauris amet dui facilisis porta sit.
+                                        Adipiscing velit amet posuere tellus vitae tincidunt facilisis enim.
+                                    </p>
+                                    <p>Blandit turpis fermentum sapien auctor maecenas vitae. Nulla arcu adipiscing
+                                        feugiat
+                                        tristique egestas. Mattis mollis pharetra quisque odio diam ullamcorper nec
+                                        consequat diam. Orci pharetra consectetur eleifend auctor commodo aliquam
+                                        tincidunt
+                                        nibh. Egestas lorem et diam parturient. Elit mattis odio ipsum cursus porttitor
+                                        sem
+                                        fusce habitant in.
+                                    </p>
+                                </div>
+                                <div class="about__logo">
+                                    <svg class="page__icon">
+                                        <use xlink:href="img/logo.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="brands">
+                <div class="brands__container">
+                    <div class="head head_side head_right">
+                        <h2 class="title title_size_46 title_color_white">Brands</h2>
+                    </div>
+                    <div class="brands__body">
+                        <div class="brands__slider">
+                            <div class="brands__swiper">
+                                <div class="swiper" data-brands-slider>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure class="brands__logo">
+                                                <img src="img/brands_img_1.png" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button brands__button brands__button_prev" data-brands-prev>
+                                <svg class="page__icon">
+                                    <use xlink:href="img/icons/sprite.svg#i-slider-arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="button brands__button brands__button_next" data-brands-next>
+                                <svg class="page__icon">
+                                    <use xlink:href="img/icons/sprite.svg#i-slider-arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
