@@ -93,7 +93,9 @@
         padding: rem(7) rem(28);
         font-weight: 500;
         color: #ffffff;
+        border: 2px solid #6e2828;
         background-color: #6e2828;
+        transition: border-color, background-color 0.3s, transform 0.3s;
 
         @media (min-width: em(639.98)) {
             padding: rem(20) rem(70);
@@ -101,6 +103,19 @@
 
         @media (max-width: em(639.98)) {
             font-size: rem(10);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #221517;
+                border-color: #a82828;
+            }
+        }
+
+        &:active {
+            background-color: #221517;
+            border-color: #a82828;
+            transform: scale(0.9);
         }
     }
 
@@ -126,11 +141,23 @@
             border-radius: 50%;
             background-color: #d9d9d9;
             cursor: pointer;
+            transition: opacity 0.3s, transform 0.3s;
 
             @media (min-width: em(639.98)) {
                 width: rem(16);
                 height: rem(16);
                 bottom: rem(118);
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+
+            &:active {
+                opacity: 0.75;
+                transform: scale(0.9);
             }
         }
 
@@ -710,7 +737,6 @@
 
                 @media (min-width: em(639.98)) and (max-width: $tablet) {
                     top: -5%;
-                    // transform: translateY(-50%);
                 }
             }
             .service__figure:last-child {
@@ -737,6 +763,7 @@
         flex-direction: column;
         row-gap: rem(3);
         transform: translateY(-50%);
+        transition: color 0.3s;
         @media (min-width: $pc) {
             transform: translateY(-100%);
         }
@@ -751,6 +778,27 @@
             width: em(373, 48);
             height: em(24, 48);
             fill: #ffffff;
+            transition: transform 0.3s, fill 0.3s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #6e2828;
+
+                svg {
+                    fill: #6e2828;
+                    transform: translateX(rem(20));
+                }
+            }
+        }
+
+        &:active {
+            color: #6e2828;
+
+            svg {
+                fill: #6e2828;
+                transform: translateX(rem(20));
+            }
         }
     }
 }
@@ -763,11 +811,19 @@
 
     &__figure {
         position: absolute;
-
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 
@@ -827,7 +883,7 @@
 
     &__master {
         position: relative;
-
+        transition: transform 0.3s;
         @media (min-width: $pc) {
             flex: 0 0 rem(531);
         }
@@ -873,6 +929,13 @@
                 & .master__list {
                     max-width: rem(395);
                 }
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                z-index: 10;
+                transform: translateY(rem(-20));
             }
         }
     }
@@ -1031,9 +1094,11 @@
         z-index: 1;
         width: rem(120);
         height: rem(120);
+        border: 2px solid #6e2828;
         background-color: #6e2828;
         border-radius: 50%;
         transform: translate(-50%, -50%);
+        transition: border-color 0.3s, background-color 0.3s;
 
         svg {
             position: absolute;
@@ -1043,6 +1108,18 @@
             width: rem(33);
             height: rem(38);
             fill: #6e2828;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: #a82828;
+                background-color: rgba(110, 40, 40, 0.5);
+            }
+        }
+
+        &:active {
+            border-color: #a82828;
+            background-color: rgba(110, 40, 40, 0.5);
         }
     }
 }
@@ -1120,6 +1197,13 @@
             width: 100%;
             height: rem(436);
             object-fit: cover;
+            transition: filter 0.3s;
+            @media (min-width: $tablet) {
+                filter: grayscale(1);
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
 
             @media (min-width: $mobile) {
                 height: rem(267);
@@ -1160,7 +1244,9 @@
     &__button {
         width: rem(54);
         height: rem(54);
+        border: 1px solid #6e2828;
         background-color: #6e2828;
+        transition: border-color, background-color 0.3s, transform 0.3s;
 
         svg {
             width: rem(8);
@@ -1172,6 +1258,19 @@
             svg {
                 transform: rotate(180deg);
             }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border: 1px solid #a82828;
+                background-color: rgba(110, 40, 40, 0.5);
+            }
+        }
+
+        &:active {
+            border-color: #a82828;
+            background-color: rgba(110, 40, 40, 0.5);
+            transform: scale(0.9);
         }
     }
 }
@@ -1223,11 +1322,13 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        transition: transform 0.3s;
 
         svg {
             width: rem(49);
             height: rem(34);
             fill: #6e2828;
+            transition: fill 0.3s;
 
             @media (min-width: $tablet) {
                 width: rem(63);
@@ -1245,6 +1346,21 @@
 
             svg {
                 transform: rotate(180deg);
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: #6e2828;
+                }
+            }
+        }
+
+        &:active {
+            transform: translateY(-50%) scale(0.9);
+            svg {
+                fill: #6e2828;
             }
         }
     }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body class="preload">
+    <div class="wrapper">
+        @@include('html/_header-page.htm',{})
+        <main class="page">
+            <section class="contacts page__inner">
+                <div class="contacts__container">
+                    <h1 class="title title_size_46 title_color_white page__title">
+                        <span>Контакты</span>
+                    </h1>
+                    <div class="contacts__columns">
+                        <ul class="contacts__list">
+                            <li class="contacts__item">
+                                <span class="contacts__caption">Наш адрес:</span>
+                                <div class="contacts__contact contacts__contact_address">
+                                    <svg class="page__icon">
+                                        <use xlink:href="img/icons/sprite.svg#i-marker"></use>
+                                    </svg>
+                                    <p>
+                                        <span>Воронеж, просп. Победы, 63А</span>
+                                        <span>(ТРЦ Березка, этаж 1)</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="contacts__item">
+                                <span class="contacts__caption">Позвоните нам:</span>
+                                <a href="tel:+79771112233" class="contacts__contact contacts__contact_phone">
+                                    <svg class="page__icon">
+                                        <use xlink:href="img/icons/sprite.svg#i-phone"></use>
+                                    </svg>
+                                    <span>+7 (977) 111-22-33</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <figure class="contacts__img">
+                            <img src="img/map.jpg" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

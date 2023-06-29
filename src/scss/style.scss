@@ -75,6 +75,37 @@ $responsiveType: 1;
 .page {
 	background-color: #221517;
 
+	&__inner {
+		padding: rem(110) 0 rem(40);
+
+		@media (min-width: em(1149.98)) {
+			padding: rem(30) 0 rem(72);
+		}
+		@media (min-width: em(639.98)) and (max-width: em(1149.98)) {
+			padding: rem(180) 0 rem(50);
+		}
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		margin-bottom: rem(30);
+
+		@media (min-width: em(1149.98)) {
+			margin-bottom: rem(70);
+		}
+		@media (min-width: $mobile) and (max-width: em(1149.98)) {
+			margin-bottom: rem(55);
+		}
+
+		span {
+			display: inline-block;
+			padding: em(10, 46) em(23, 46);
+			background-color: #6e2828;
+		}
+	}
+
 	&__icon {
 		display: inline-block;
 	}
@@ -148,3 +179,6 @@ $responsiveType: 1;
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "news";
+@import "price";
+@import "contacts";

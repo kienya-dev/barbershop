@@ -1,0 +1,174 @@
+.price {
+    &__grid {
+        display: grid;
+        gap: rem(30);
+        justify-content: space-between;
+
+        @media (min-width: $tablet) {
+            grid-template-columns: percent(634, 1358) percent(663, 1358);
+            gap: rem(106) rem(40);
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            gap: rem(40);
+        }
+    }
+
+    &__head {
+        position: absolute;
+        display: inline-block;
+        padding: em(10, 46) em(23, 46);
+        z-index: 2;
+        background-color: #6e2828;
+        transform: translateY(-50%);
+        &_center {
+            top: rem(0);
+            left: 50%;
+
+            @media (min-width: $tablet) {
+                top: rem(628);
+                left: rem(50);
+            }
+
+            @media (max-width: $tablet) {
+                transform: translate(-50%, 70%);
+            }
+        }
+
+        &_left {
+            top: rem(0);
+            left: 50%;
+            @media (min-width: $tablet) {
+                top: 0;
+                left: 0;
+            }
+            @media (max-width: $tablet) {
+                transform: translate(-50%, 70%);
+            }
+        }
+    }
+
+    &__content {
+    }
+
+    &__caption {
+        font-size: rem(20);
+        margin-bottom: em(20, 32);
+        @media (min-width: $mobile) {
+            font-size: rem(32);
+        }
+    }
+
+    &__images {
+        position: relative;
+        display: flex;
+
+        @media (min-width: $tablet) {
+            flex-direction: column;
+            align-items: end;
+            margin-bottom: rem(-150);
+        }
+
+        @media (max-width: $tablet) {
+            padding-top: rem(50);
+        }
+
+        figure {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        figure:nth-child(1) {
+            max-width: rem(663);
+            max-height: rem(628);
+        }
+
+        figure:nth-child(2) {
+            max-width: rem(530);
+            transform: translateY(rem(-50));
+            @media (min-width: $tablet) {
+                padding-left: percent(135, 735);
+                transform: translateY(rem(-150));
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+
+        figure {
+            width: 100%;
+            height: 100%;
+
+            @media (min-width: $tablet) {
+                max-width: rem(663);
+            }
+
+            @media (max-width: $tablet) {
+                max-height: rem(470);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            order: 4;
+        }
+    }
+}
+
+.price-list {
+    &__item {
+        display: grid;
+        gap: rem(6);
+        align-items: end;
+        padding: em(22, 16) 0 em(20, 16);
+        border-bottom: 1px dashed #ffffff;
+        font-size: rem(12);
+        font-weight: 500;
+
+        @media (min-width: $mobile) {
+            font-size: rem(16);
+        }
+
+        @media (min-width: $mobileSmall) and (max-width: $mobile) {
+            font-size: rem(14);
+        }
+
+        &:first-child {
+            border-top: 1px dashed #ffffff;
+        }
+
+        &_grid {
+            grid-template-columns: auto 1fr;
+        }
+    }
+
+    &__info {
+        font-size: rem(16);
+        color: #ffffff;
+        &_caption {
+            grid-column: span 2;
+            line-height: 1.25;
+        }
+    }
+
+    &__price {
+        font-size: rem(20);
+        font-weight: 700;
+        color: #c09e9e;
+
+        @media (min-width: $mobile) {
+            font-size: rem(24);
+        }
+    }
+}

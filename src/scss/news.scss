@@ -1,0 +1,229 @@
+.news {
+    &__grid {
+        display: grid;
+        row-gap: rem(16);
+        margin-bottom: rem(20);
+
+        @media (min-width: $tablet) {
+            row-gap: rem(67);
+            margin-bottom: rem(40);
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            row-gap: rem(30);
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__article {
+        border-bottom: 1px dashed #ffffff;
+    }
+}
+
+.news-article {
+    display: grid;
+
+    gap: rem(16) rem(30);
+    align-content: space-between;
+    padding-bottom: rem(20);
+
+    @media (min-width: em(1149.98)) {
+        gap: rem(30) rem(65);
+    }
+
+    @media (min-width: $tablet) and (max-width: em(1149.98)) {
+        gap: rem(30) rem(40);
+    }
+
+    @media (min-width: $tablet) {
+        grid-template-columns: percent(627, 1358) percent(663, 1358);
+        padding-bottom: rem(67);
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        padding-bottom: rem(30);
+        gap: rem(24) rem(30);
+    }
+
+    &__head {
+        @media (max-width: $tablet) {
+            order: 1;
+        }
+    }
+
+    &__date {
+        display: inline-block;
+        margin-bottom: em(10, 13);
+        font-size: rem(13);
+        font-weight: 700;
+        color: #6e2828;
+    }
+
+    &__title {
+        transition: color 0.3s;
+        @media (min-width: $tablet) and (max-width: em(1149.98)) {
+            font-size: rem(36);
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #6e2828;
+            }
+        }
+
+        &:active {
+            color: #6e2828;
+        }
+    }
+
+    &__content {
+        @media (max-width: $tablet) {
+            order: 3;
+        }
+    }
+
+    &__text {
+        display: grid;
+        row-gap: em(18, 20);
+        margin-bottom: em(22, 20);
+        text-align: justify;
+        @media (min-width: $tablet) {
+            row-gap: em(27, 20);
+            margin-bottom: em(36, 20);
+        }
+    }
+
+    &__link {
+        column-gap: rem(7);
+        font-family: "BernierDistressed";
+        font-size: rem(18);
+        text-transform: uppercase;
+        color: #6e2828;
+        transition: color 0.3s, column-gap 0.3s;
+
+        @media (min-width: $mobile) {
+            font-size: rem(24);
+        }
+
+        svg {
+            fill: currentColor;
+            width: em(32, 24);
+            height: em(23, 24);
+            transform: rotate(180deg);
+            transition: fill 0.3s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #ffffff;
+                column-gap: rem(17);
+            }
+        }
+
+        &:active {
+            color: #ffffff;
+            column-gap: rem(17);
+        }
+    }
+
+    &__img {
+        height: 100%;
+        @media (min-width: $tablet) {
+            grid-row: 1/3;
+        }
+        @media (max-width: $tablet) {
+            order: 2;
+        }
+
+        &_left {
+            @media (min-width: $tablet) {
+                grid-column: 2/3;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.paginate-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(10);
+    @media (min-width: $mobile) {
+        gap: rem(21);
+    }
+
+    &__item {
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.12;
+        width: rem(24);
+        height: rem(24);
+        color: #ffffff;
+        border: 1px solid #6e2828;
+        transition: border-color 0.3s, background-color 0.3s, transform 0.3s;
+
+        @media (min-width: $mobile) {
+            width: rem(55);
+            height: rem(55);
+        }
+
+        @media (max-width: $mobile) {
+            font-size: rem(12);
+        }
+
+        &_active {
+            background-color: #6e2828;
+            pointer-events: none;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: #a82828;
+                background-color: #462323;
+            }
+        }
+
+        &:active {
+            border-color: #a82828;
+            background-color: #462323;
+            transform: scale(0.9);
+        }
+    }
+
+    &__more {
+        @media (max-width: $mobile) {
+            font-size: rem(12);
+        }
+    }
+
+    &__control {
+        background-color: #6e2828;
+        svg {
+            width: rem(10);
+            height: rem(8);
+            fill: #ffffff;
+
+            @media (min-width: $mobile) {
+                width: rem(8);
+                height: rem(14);
+            }
+        }
+
+        &_next {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
